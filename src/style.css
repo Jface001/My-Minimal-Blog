@@ -481,9 +481,9 @@ article img {
     border-radius: 0;
     margin-bottom: 30px;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
+    flex-direction: row; /* 改为水平排列 */
+    align-items: center; /* 垂直居中 */
+    gap: 15px; /* 元素间距 */
     font-size: 0.9rem;
     color: var(--meta-color);
     border-left: none;
@@ -492,6 +492,15 @@ article img {
     /* 关键：重置内边距和外边距，确保左对齐 */
     padding-left: 0 !important;
     margin-left: 0 !important;
+}
+
+/* 移动端下保持换行，防止太挤 */
+@media (max-width: 600px) {
+    .post-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
 }
 
 /* 列表页元数据 */
@@ -526,7 +535,7 @@ article img {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    margin-top: 2px;
+    margin-top: 0; /* 移除顶部间距 */
 }
 
 /* 文章详情页标题样式 */
