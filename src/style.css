@@ -193,13 +193,59 @@ header nav a::after {
 
 /* 移动端适配 */
 @media (max-width: 600px) {
+    .container {
+        margin: 30px auto; /* 减小顶部边距 */
+        padding: 0 15px; /* 稍微减小内边距 */
+    }
+
+    header {
+        margin-bottom: 40px; /* 减小头部下方间距 */
+    }
+
+    .site-title {
+        font-size: 1.3rem; /* 稍微减小标题字号 */
+    }
+
+    header nav a {
+        margin-left: 15px; /* 减小导航间距 */
+        font-size: 0.95rem;
+    }
+
     .post-item-content {
         flex-direction: column-reverse;
+        gap: 15px; /* 减小间距 */
     }
     
     .post-cover-wrapper {
         width: 100%;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
+    }
+
+    .post-title {
+        font-size: 1.25rem;
+    }
+
+    .post-desc {
+        -webkit-line-clamp: 2; /* 移动端只显示2行简介 */
+    }
+
+    /* 优化代码块在移动端的显示 */
+    pre {
+        margin: 1.5em -15px; /* 让代码块在移动端贴边，增加可视区域 */
+        border-radius: 0;
+        padding: 15px;
+        padding-top: 45px;
+    }
+    
+    pre::before {
+        left: 15px; /* 调整圆点位置 */
+    }
+
+    /* 优化大图显示 */
+    .post-cover-large {
+        margin: -20px -15px 20px -15px;
+        width: calc(100% + 30px);
+        border-radius: 0;
     }
 }
 
