@@ -31,7 +31,7 @@
                 if (isDark) {
                     body.classList.add('dark-mode');
                     if (icon) icon.textContent = '☀️';
-                    updateGiscusTheme('dark_dimmed'); // 使用暗淡深色主题，比 transparent_dark 更清晰，比 pure dark 更柔和
+                    updateGiscusTheme('noborder_dark'); // 使用无边框深色，简洁且适配性好
                 } else {
                     body.classList.remove('dark-mode');
                     if (icon) icon.textContent = '🌙';
@@ -58,6 +58,18 @@
 
             // 页面加载时初始化
             document.addEventListener('DOMContentLoaded', initTheme);
+
+            // 监听 Giscus 加载完成的消息，确保主题同步
+            window.addEventListener('message', function(event) {
+                if (event.origin === 'https://giscus.app') {
+                    // 当收到 Giscus 的消息时（说明它加载了），强制同步一次当前主题
+                    const isDark = document.body.classList.contains('dark-mode');
+                    // 稍微延迟一下确保 Giscus 准备好接收消息
+                    setTimeout(() => {
+                        applyTheme(isDark);
+                    }, 500);
+                }
+            });
 
             // 暴露给全局，供 SPA 跳转后调用
             window.refreshTheme = initTheme;
