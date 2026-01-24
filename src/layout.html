@@ -15,12 +15,27 @@
                 const body = document.body;
                 const icon = document.querySelector('#theme-toggle span');
                 
+                // 动态切换 Giscus 主题
+                function updateGiscusTheme(themeName) {
+                    const iframe = document.querySelector('iframe.giscus-frame');
+                    if (!iframe) return;
+                    iframe.contentWindow.postMessage({
+                        giscus: {
+                            setConfig: {
+                                theme: themeName
+                            }
+                        }
+                    }, 'https://giscus.app');
+                }
+
                 if (isDark) {
                     body.classList.add('dark-mode');
                     if (icon) icon.textContent = '☀️';
+                    updateGiscusTheme('dark'); // 夜间模式用 dark 主题
                 } else {
                     body.classList.remove('dark-mode');
                     if (icon) icon.textContent = '🌙';
+                    updateGiscusTheme('light_high_contrast'); // 白天模式用高对比度亮色
                 }
             }
 
