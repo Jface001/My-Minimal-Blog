@@ -5,6 +5,8 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
+    "build": "node build.js",
+    "dev": "node build.js && npx serve public",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -12,6 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "front-matter": "^4.0.2",
+    "highlight.js": "^11.11.1",
     "marked": "^17.0.1"
   }
 }
