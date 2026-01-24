@@ -5,9 +5,9 @@ description:
 tags: [周更挑战]
 category: 普通生活
 author: 惊羽
-cover: https://s2.loli.net/2023/05/07/Ur1DWEjY5zvsTXZ.webp
+cover: /images/1361772785_Ur1DWEjY5zvsTXZ.webp
 ---
-![](https://s2.loli.net/2023/05/07/Ur1DWEjY5zvsTXZ.webp)
+![](/images/1361772785_Ur1DWEjY5zvsTXZ.webp)
 
 终于读完机核朋友推荐的铁凝的《大浴女》，看到结尾心情确实有些沉重。我很羡慕她们在最后可以勇敢又坦然地接纳自己，说出自己内心最深处伤痕。我经常跟别人说真正的放下就是微笑面对曾经恐惧逃避的事务，但我自己做不到，我还是无法接纳跟面对自己的原生家庭，我还在逃避。
 

@@ -5,7 +5,7 @@ description:
 tags: [周更挑战, Kafka]
 category: 数据仓库
 author: 惊羽
-cover: https://s2.loli.net/2023/02/26/o32Clt9jkAyERFp.png
+cover: /images/1399585465_o32Clt9jkAyERFp.png
 ---
 ### 消息队列简介
 
@@ -59,7 +59,7 @@ cover: https://s2.loli.net/2023/02/26/o32Clt9jkAyERFp.png
 
 #### 点对点模式
 
-![](https://s2.loli.net/2023/02/26/Ln3SwmOIzRjulxk.png)
+![](/images/1909750537_Ln3SwmOIzRjulxk.png)
 
 - 特点
 
@@ -68,7 +68,7 @@ cover: https://s2.loli.net/2023/02/26/o32Clt9jkAyERFp.png
 
 #### 订阅发布模式
 
-![](https://s2.loli.net/2023/02/26/9FXpOSfPZLYWiGb.png)
+![](/images/613651022_9FXpOSfPZLYWiGb.png)
 
 - 特点
 
@@ -134,7 +134,7 @@ cover: https://s2.loli.net/2023/02/26/o32Clt9jkAyERFp.png
 
 #### 应用场景 
 
-实时场景图示![](https://s2.loli.net/2023/02/26/o32Clt9jkAyERFp.png)
+实时场景图示![](/images/1399585465_o32Clt9jkAyERFp.png)
 
 - 实时大数据,必用Kafka
 
@@ -145,7 +145,7 @@ cover: https://s2.loli.net/2023/02/26/o32Clt9jkAyERFp.png
 
 ### 结构概念
 
-![](https://s2.loli.net/2023/02/26/cgDyoJvqnU9hV23.png)
+![](/images/1925205537_cgDyoJvqnU9hV23.png)
 
 #### Producer生产者
 
@@ -235,7 +235,7 @@ cover: https://s2.loli.net/2023/02/26/o32Clt9jkAyERFp.png
 
 #### 存储结构
 
-![](https://s2.loli.net/2023/02/26/m9hnAaFgleX4uIc.png)
+![](/images/1855130444_m9hnAaFgleX4uIc.png)
 
 - Broker存储节点
 - Producer生产者
@@ -306,7 +306,7 @@ cover: https://s2.loli.net/2023/02/26/o32Clt9jkAyERFp.png
 
 - 索引内容
 
-![](https://s2.loli.net/2023/02/26/qpGY92oTPbI846O.png)
+![](/images/1334703638_qpGY92oTPbI846O.png)
 
 - - 第1列：这条数据在这个文件中的位置
   - 第2列：这条数据在文件中的物理偏移量
@@ -440,7 +440,7 @@ cover: https://s2.loli.net/2023/02/26/o32Clt9jkAyERFp.png
 
 #### 第2次开始
 
-![](https://s2.loli.net/2023/02/26/425c1OEqsBfaYkw.png)
+![](/images/17015182_425c1OEqsBfaYkw.png)
 
 - 根据上一次消费的Offset位置+1继续进行消费
 - 消费者将consumer offset记录在内存
@@ -566,14 +566,14 @@ cover: https://s2.loli.net/2023/02/26/o32Clt9jkAyERFp.png
 
 #### compact清理规则
 
-![](https://s2.loli.net/2023/02/26/NiyYjScbv2wf7MC.png)
+![](/images/508015092_NiyYjScbv2wf7MC.png)
 
 - 将重复的更新数据的老版本删除，保留新版本
 - 要求每条数据必须要有Key，根据Key来判断是否重复
 
 ### 集群架构 
 
-![](https://s2.loli.net/2023/02/26/2yCYw3sSoucQqzI.png)
+![](/images/2097168064_2yCYw3sSoucQqzI.png)
 
 #### 角色
 
@@ -688,7 +688,7 @@ bin/kafka-topics.sh --create --topic bigdata01 --partitions 3 --replication-fact
 
 - - 问题根源: ACK丢失
 
-![](https://s2.loli.net/2023/02/26/nVlMfph23Lmd4b1.png)
+![](/images/2080231203_nVlMfph23Lmd4b1.png)
 
 - - 幂等性机制f(x) = f(f(x))
 
@@ -714,7 +714,7 @@ bin/kafka-topics.sh --create --topic bigdata01 --partitions 3 --replication-fact
 
 #### 数据同步名词
 
-![](https://s2.loli.net/2023/02/26/lvxDSVOdqZjsk2f.png)
+![](/images/1172897524_lvxDSVOdqZjsk2f.png)
 
 - HW当前这个分区所有副本同步的最低位置 + 1，消费者能消费到的最大位置
 - LEO当前每个副本已经写入数据的最新位置 + 1

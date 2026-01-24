@@ -5,7 +5,7 @@ description:
 tags: [周更挑战, Spark]
 category: Spark
 author: 惊羽
-cover: https://s2.loli.net/2023/02/12/JhsFBVYuNkorAix.png
+cover: /images/148911161_JhsFBVYuNkorAix.png
 ---
 ### spark 任务提交 4 种方式
 

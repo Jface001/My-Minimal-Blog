@@ -5,9 +5,9 @@ description:
 tags: [周更挑战, Spark]
 category: Spark
 author: 惊羽
-cover: https://s2.loli.net/2023/02/12/JhsFBVYuNkorAix.png
+cover: /images/148911161_JhsFBVYuNkorAix.png
 ---
-![](https://s2.loli.net/2023/02/12/JhsFBVYuNkorAix.png)
+![](/images/148911161_JhsFBVYuNkorAix.png)
 
 整理学习 Spark 相关知识的笔记，查缺补漏。不得不说整理的时候重新捡起了很多遗忘的知识，Scala 我也很久很久没有写了, 现在公司用的是 Pyspark ，后面也整理记录下 Pyspark 的相关笔记。
 
@@ -42,7 +42,7 @@ cover: https://s2.loli.net/2023/02/12/JhsFBVYuNkorAix.png
 3. 都支持【持久化】,都支持【12】种缓存策略
 4. 都支持【checkpoint】
 
-![img](https://s2.loli.net/2023/02/12/c6AzxOq3tQwGBuR.png)
+![img](/images/1287386441_c6AzxOq3tQwGBuR.png)
 
 #### RDD
 
@@ -64,7 +64,7 @@ cover: https://s2.loli.net/2023/02/12/JhsFBVYuNkorAix.png
 4. 支持catalyst，【RBO】基于规则的优化（【常量折叠】，【谓词下推】，【列裁剪】）和【CBO】（基于代价模型的优化）
 5. 缺点：DataFrame不能【类型安全检查】：比如dataframe.select("不存在字段")这句代码编译【通过】，但是运行时【报错】。
 
-![](https://s2.loli.net/2023/02/12/M4QpcG23kdbClsw.png)
+![](/images/1625764405_M4QpcG23kdbClsw.png)
 
 #### Dataset
 
@@ -76,17 +76,17 @@ cover: https://s2.loli.net/2023/02/12/JhsFBVYuNkorAix.png
 6. 直接继承了DataFrame的【catalyst】优化
 7. 独有【Tungsten】优化，支持特殊的编码器，基于内存管理的优化，使对象的存储更节省空间。
 
-![](https://s2.loli.net/2023/02/12/lvU9q5Q8gGLScRE.png)
+![](/images/2086131680_lvU9q5Q8gGLScRE.png)
 
 ### Spark 跟 Hive 的关系
 
  **Spark Thriftserver hiveserver2 metastore beeline 的关系**
 
-![](https://s2.loli.net/2023/02/12/Hwfc3kOP1od5Rel.png)
+![](/images/1946470801_Hwfc3kOP1od5Rel.png)
 
 ### Spark SQL catalyst 优化器
 
-![](https://s2.loli.net/2023/02/12/KTw7JjcRzhavEYB.png)
+![](/images/835686429_KTw7JjcRzhavEYB.png)
 
 - **RBO:基于规则优化**
 
@@ -102,15 +102,15 @@ cover: https://s2.loli.net/2023/02/12/JhsFBVYuNkorAix.png
 
 #### Yarn-cluster 方式提交任务
 
-![](https://s2.loli.net/2023/02/12/kJHfVuOoAWedmn9.png)
+![](/images/108348241_kJHfVuOoAWedmn9.png)
 
 #### Yarn-client 方式提交任务
 
-![](https://s2.loli.net/2023/02/12/zJvfnq1FCY2MPW5.png)
+![](/images/1446382063_zJvfnq1FCY2MPW5.png)
 
 ### Spark 调度任务执行流程
 
-![](https://s2.loli.net/2023/02/12/3pSP5QIRweFhbGy.png)
+![](/images/1736537615_3pSP5QIRweFhbGy.png)
 
 #### 准备执行
 
@@ -142,7 +142,7 @@ cover: https://s2.loli.net/2023/02/12/JhsFBVYuNkorAix.png
 
 ### Spark Steaming 原理
 
-![](https://s2.loli.net/2023/02/12/T4I6tEy7kNmi1Qg.png)
+![](/images/960518294_T4I6tEy7kNmi1Qg.png)
 
 1. StreamingContext对象封装了SparkContext对象
 2. 启动时同时启动Driver Executor
@@ -157,7 +157,7 @@ cover: https://s2.loli.net/2023/02/12/JhsFBVYuNkorAix.png
 
 #### 抽象概念
 
-![](https://s2.loli.net/2023/02/12/QH4zl9KWRNaeiT5.png)
+![](/images/1517625698_QH4zl9KWRNaeiT5.png)
 
 1. input table unbounded table无边界表,动态的增加数据,用DataFrame表示
 2. data stream增量数据, 以行形式追加到unbounded table
@@ -167,7 +167,7 @@ cover: https://s2.loli.net/2023/02/12/JhsFBVYuNkorAix.png
 
 #### EventTime 事件时间
 
-![](https://s2.loli.net/2023/02/12/nV5TjkyH7BXW3b1.png)
+![](/images/996457771_nV5TjkyH7BXW3b1.png)
 
  **时间的分类**
 
@@ -177,7 +177,7 @@ cover: https://s2.loli.net/2023/02/12/JhsFBVYuNkorAix.png
 
 **应用场景：基于事件时间的窗口聚合**
 
-![](https://s2.loli.net/2023/02/12/J1KU2ngYB45GXSM.png)
+![](/images/1162730265_J1KU2ngYB45GXSM.png)
 
 #### watermark 水位
 
@@ -186,6 +186,6 @@ cover: https://s2.loli.net/2023/02/12/JhsFBVYuNkorAix.png
 - MaxEventTime【上】一批次数据中的【最大的eventime值】
 - Threshold 预估事件的延迟时间上限
 
-![](https://s2.loli.net/2023/02/12/Z18GVxJtjYwRA6C.png)
+![](/images/1572465724_Z18GVxJtjYwRA6C.png)
 
-![](https://s2.loli.net/2023/02/12/oJuqfAB3VtzpDmx.png)
+![](/images/1656886434_oJuqfAB3VtzpDmx.png)

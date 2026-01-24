@@ -64,7 +64,7 @@ join t_score ts on s.sid = ts.sid
 where ts.score is not null ;
 ```
 
-![Untitled](https://i.loli.net/2021/09/03/JIUxdHebiaFhlBz.png)
+![Untitled](/images/1986560106_JIUxdHebiaFhlBz.png)
 
 - 在 where后面
 
@@ -75,7 +75,7 @@ join t_score ts
 where s.sid=ts.sid and ts.score is not null ;
 ```
 
-![Untitled](https://i.loli.net/2021/09/03/tkaNXALl8FzIiYT.png)
+![Untitled](/images/1806620951_tkaNXALl8FzIiYT.png)
 
 ### 外连接
 
@@ -90,7 +90,7 @@ left join t_score ts on s.sid = ts.sid  and  ts.score is not null ;
 
 ```
 
-![Untitled](https://i.loli.net/2021/09/03/AIrX7xsPdEaqUty.png)
+![Untitled](/images/1937463988_AIrX7xsPdEaqUty.png)
 
 - 在 where 后面
 
@@ -102,7 +102,7 @@ left join t_score ts on s.sid = ts.sid
 where ts.score is not null ;
 ```
 
-![Untitled](https://i.loli.net/2021/09/03/u4tXn2UqxcTOp1z.png)
+![Untitled](/images/2074097247_u4tXn2UqxcTOp1z.png)
 
 ### 原因解析
 

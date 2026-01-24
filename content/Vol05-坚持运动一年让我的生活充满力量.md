@@ -5,9 +5,9 @@ description:
 tags: [周更挑战]
 category: 普通生活
 author: 惊羽
-cover: https://s2.loli.net/2023/01/08/A67QsXtmySWvi9c.jpg
+cover: /images/1569630217_A67QsXtmySWvi9c.jpg
 ---
-![](https://s2.loli.net/2023/01/08/A67QsXtmySWvi9c.jpg)
+![](/images/1569630217_A67QsXtmySWvi9c.jpg)
 
 
 
@@ -15,25 +15,25 @@ cover: https://s2.loli.net/2023/01/08/A67QsXtmySWvi9c.jpg
 
 
 
-<img src="https://s2.loli.net/2023/01/08/g9jTq6cHrNSytAp.png" alt="" style="zoom:50%;" />
+<img src="/images/359223763_g9jTq6cHrNSytAp.png" alt="" style="zoom:50%;" />
 
-<img src="https://s2.loli.net/2023/01/08/XLTWCKE9yPt2p1s.png" alt="" style="zoom:50%;" />
+<img src="/images/2130883260_XLTWCKE9yPt2p1s.png" alt="" style="zoom:50%;" />
 
-<img src="https://s2.loli.net/2023/01/08/Oc5utQmihgfN4wM.png" alt="" style="zoom:50%;" />
+<img src="/images/726844488_Oc5utQmihgfN4wM.png" alt="" style="zoom:50%;" />
 
-<img src="https://s2.loli.net/2023/01/08/6XlGrjChukMLHvZ.png" alt="" style="zoom:50%;" />
+<img src="/images/658170833_6XlGrjChukMLHvZ.png" alt="" style="zoom:50%;" />
 
-<img src="https://s2.loli.net/2023/01/08/2Y3Mhkf7U8JP1nc.png" alt="" style="zoom:50%;" />
+<img src="/images/170089658_2Y3Mhkf7U8JP1nc.png" alt="" style="zoom:50%;" />
 
-<img src="https://s2.loli.net/2023/01/08/9Ze6LO7QgMlqY2i.png" alt="" style="zoom:50%;" />
+<img src="/images/699486296_9Ze6LO7QgMlqY2i.png" alt="" style="zoom:50%;" />
 
-<img src="https://s2.loli.net/2023/01/08/BOfUXTZSjduJqH7.png" alt="" style="zoom:50%;" />
+<img src="/images/1207491246_BOfUXTZSjduJqH7.png" alt="" style="zoom:50%;" />
 
-<img src="https://s2.loli.net/2023/01/08/oJqiXVEF7N9euWH.png" alt="" style="zoom:50%;" />
+<img src="/images/1757478403_oJqiXVEF7N9euWH.png" alt="" style="zoom:50%;" />
 
 
 
-<img src="https://s2.loli.net/2023/01/08/mlvw6W4rBD8AG7d.jpg" alt="" style="zoom: 67%;" />
+<img src="/images/893234324_mlvw6W4rBD8AG7d.jpg" alt="" style="zoom: 67%;" />
 
 ### 坚持运动让我的生活充满力量
 
@@ -41,19 +41,19 @@ cover: https://s2.loli.net/2023/01/08/A67QsXtmySWvi9c.jpg
 
 坚持运动这一年，我的体能明显增加，刚刚开始 BC 我第 5 小节之后基本干不动，都在摸鱼，现在轻轻松松可以 hold 住全程，燃脂保持在 600 千卡以上。身体协调性也更强了，跳踢、侧踢、波比跳都不在话下，撩起来腿就能踢出去，核心很稳。体能协调性提升的好处非常明显，免疫力增强，日常生活更有动力跟力量，这次阳了之后，我基本没有啥大的症状，3 天就恢复状态。体能增强之后还有一个好处：跟别人讨论沟通更有底气了，因为如果言语上说服不了，我可以尝试物理说服，没在怕的。
 
-<img src="https://s2.loli.net/2023/01/08/pz3yH5BLE2dcnDU.jpg" alt="7 天转阴记录" style="zoom:50%;" />
+<img src="/images/994583990_pz3yH5BLE2dcnDU.jpg" alt="7 天转阴记录" style="zoom:50%;" />
 
 #### 更自信，更热情开朗
 
 身边朋友都说我开始运动之后，整个人精神面貌焕然一新。运动锻炼让我能够发泄情绪，把平时在工作跟生活中积攒的负能量发泄出来，多余的精力释放掉，让我能更好的专注于当前的生活。运动也让我的体态更优美，特别开始上 BJ 舞蹈课之后，身体协调性跟节奏变好了，能跟上各种斯比特。因为精神状态跟身体体态的变化，让我对自己的外貌更有自信，接人待物也更开朗，对于生活充满了热情。同时运动也改变了我穿搭的风格，霍比特人身高的我，平时都是有啥穿啥，开始锻炼之后开始走运动风格，白色运动 T 恤 + 运动短裤 + 运动训练鞋，百搭街头风，也特别能凸显个人积极向上的精神面貌。
 
-<img src="https://s2.loli.net/2023/01/08/DKecnCdmoGjgpSU.jpg" alt="我现在的穿搭" style="zoom: 50%;" />
+<img src="/images/1712641244_DKecnCdmoGjgpSU.jpg" alt="我现在的穿搭" style="zoom: 50%;" />
 
 #### 进入新圈子，认识新伙伴
 
 运动作为一种爱好，让我进入了一个全新的圈子。我喜欢超级猩猩原因之一就是团课不需要社交，上完即走无需交流，但是我还是认识了一群一起上课的 “好友”。我们一起上课、操房里眼神上鼓励交流、BC 的时候 PK 波比跳，但我确实不晓得他们的名字，也不晓得他们从哪里的，做什么工作的，我们仅仅碰巧经常一起上同一节课而已。我特别喜欢这样的社交方式，互相眼熟，有共同的爱好，也能互相鼓励，但是没有绑定社交关系，没有加微信留电话，弱性的社交关系让我非常放松没有社交压力，同时也能知道我们是一起坚持运动锻炼的 “ 好友 ”。
 
-<img src="https://s2.loli.net/2023/01/08/vXcT4EHZ1M2DKVI.png" alt="过去一年跟 1306 个猩友相遇" style="zoom:50%;" />
+<img src="/images/234843564_vXcT4EHZ1M2DKVI.png" alt="过去一年跟 1306 个猩友相遇" style="zoom:50%;" />
 
 ### 新 1 年新的运动 flag
 

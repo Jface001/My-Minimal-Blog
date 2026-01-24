@@ -5,9 +5,9 @@ description:
 tags: [周更挑战, Spark, Python]
 category: Spark
 author: 惊羽
-cover: https://s2.loli.net/2023/02/05/YW5l74HBT6skpcf.png
+cover: /images/1846931451_YW5l74HBT6skpcf.png
 ---
-![](https://s2.loli.net/2023/02/05/YW5l74HBT6skpcf.png)
+![](/images/1846931451_YW5l74HBT6skpcf.png)
 
 Python 用于数据分析的优势我就不多赘述，虽然当前基本不写 Python，但是我经常需要阅读 Python 代码，看别人写的数据处理逻辑，所以开始进一步学习 Pyspark 相关的知识。Jupyter 应该是学习 Python 数据分析最佳的工具了，趁着刚刚安装完，记录下自己环境配置跟常用的工具。
 
@@ -142,7 +142,7 @@ root
 
 最终效果
 
-![最终效果](https://s2.loli.net/2023/02/05/MtQNHYAJPCFl2rO.png)
+![最终效果](/images/2068334694_MtQNHYAJPCFl2rO.png)
 
 ### 数据分析推荐资料
 

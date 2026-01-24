@@ -11,7 +11,7 @@ cover: /images/spark.svg
 
 > 面试题：`spark on hive和hive on spark`区别？？？？
 
-![1630310212506](https://i.loli.net/2021/09/09/ZIij3s9rePu7VOM.png)
+![1630310212506](/images/853841107_ZIij3s9rePu7VOM.png)
 
 
 
@@ -27,7 +27,7 @@ cover: /images/spark.svg
 
 ```
 
-![1630309369960](https://i.loli.net/2021/09/09/GYA4PBNx5oZV8aT.png)
+![1630309369960](/images/1099803017_GYA4PBNx5oZV8aT.png)
 
 
 
@@ -44,7 +44,7 @@ SparkSQL与Hive集成，本质就是Spark Application应用程序，读取加载
 
 > ​		Spark Thrift Server将Spark Applicaiton当做一个服务运行，提供Beeline客户端和JDBC方式访问，与Hive中**HiveServer2**服务一样的
 
-![1630310389289](https://i.loli.net/2021/09/09/S6XtOoECMzY91Fq.png)
+![1630310389289](/images/2044880409_S6XtOoECMzY91Fq.png)
 
 
 
@@ -94,7 +94,7 @@ beeline> !connect jdbc:hive2://node1:10000
 
 > 知识点：Spark Application运行架构
 
-![Spark cluster components](https://i.loli.net/2021/09/09/jKbPa9UTdv3VS7r.png)
+![Spark cluster components](/images/454170968_jKbPa9UTdv3VS7r.png)
 
 
 
@@ -113,13 +113,13 @@ beeline> !connect jdbc:hive2://node1:10000
 			Cache缓存数据，需要内存
 ```
 
-![1631180184608](https://i.loli.net/2021/09/09/FoNEep87UHqLACx.png)
+![1631180184608](/images/1088123795_FoNEep87UHqLACx.png)
 
 
 
 > 在运行Spark Application时，需要设置如下三个参数：
 
-![1631180387861](https://i.loli.net/2021/09/09/4BqXng9zNCmsMx1.png)
+![1631180387861](/images/1475103087_4BqXng9zNCmsMx1.png)
 
 
 
@@ -136,12 +136,12 @@ beeline> !connect jdbc:hive2://node1:10000
   
   - 约定：Storage存储和Execution执行内存占比，默认各占50%
 
-![1630315362244](https://i.loli.net/2021/09/09/eQTLtw7WhAFbiUn.png)
+![1630315362244](/images/1844471483_eQTLtw7WhAFbiUn.png)
 
 - 动态彼此相互借用
   - 如果Storage存储内存不足，但是Execution内存多余，可以借用存储数据，反之亦然
 
-![1630315328271](https://i.loli.net/2021/09/09/nQbt9yAMRCfdjT4.png)
+![1630315328271](/images/144070127_nQbt9yAMRCfdjT4.png)
 
 
 
@@ -167,7 +167,7 @@ beeline> !connect jdbc:hive2://node1:10000
 		1- spark.memory.storageFraction = 0.5
 ```
 
-![1630309139547](https://i.loli.net/2021/09/09/JP8fBFtXqz2srjL.png)
+![1630309139547](/images/307024483_JP8fBFtXqz2srjL.png)
 
 
 

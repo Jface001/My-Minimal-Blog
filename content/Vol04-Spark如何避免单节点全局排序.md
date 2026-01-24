@@ -5,9 +5,9 @@ description:
 tags: [周更挑战, Spark, Hive]
 category: 日常工作
 author: 惊羽
-cover: https://s2.loli.net/2023/01/02/D6hZklc1OntfFdJ.jpg
+cover: /images/17736140_D6hZklc1OntfFdJ.jpg
 ---
-![](https://s2.loli.net/2023/01/02/D6hZklc1OntfFdJ.jpg)
+![](/images/17736140_D6hZklc1OntfFdJ.jpg)
 
 
 

@@ -5,9 +5,9 @@ description:
 tags: [周更挑战, Shell, Python, Linux]
 category: 日常工作
 author: 惊羽
-cover: https://s2.loli.net/2022/12/18/iDfY9MS3dsgrPL8.png
+cover: /images/1953542992_iDfY9MS3dsgrPL8.png
 ---
-![vim cheat sheet](https://s2.loli.net/2022/12/18/h13sx5OYpqvIDFb.png)
+![vim cheat sheet](/images/185535796_h13sx5OYpqvIDFb.png)
 
 
 

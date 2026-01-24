@@ -50,4 +50,4 @@ cover: /images/CD2.jpg
 ```
 
 - 基本流程图
-- ![CD2](https://i.loli.net/2021/09/18/ptV2hILPlW1uZUB.png)
+- ![CD2](/images/1485339578_ptV2hILPlW1uZUB.png)

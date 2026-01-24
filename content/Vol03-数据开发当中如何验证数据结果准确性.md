@@ -5,9 +5,9 @@ description:
 tags: [周更挑战, Spark]
 category: 日常工作
 author: 惊羽
-cover: https://s2.loli.net/2022/12/25/O7ZVahpqkvtN2Dw.jpg
+cover: /images/46863944_O7ZVahpqkvtN2Dw.jpg
 ---
-![](https://s2.loli.net/2022/12/25/O7ZVahpqkvtN2Dw.jpg)
+![](/images/46863944_O7ZVahpqkvtN2Dw.jpg)
 
 ### 前言说明
 

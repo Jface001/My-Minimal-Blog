@@ -5,9 +5,9 @@ description:
 tags: [周更挑战]
 category: 数据仓库
 author: 惊羽
-cover: https://s2.loli.net/2023/03/05/zYSuPGQB6O2fgoX.webp
+cover: /images/1173768958_zYSuPGQB6O2fgoX.webp
 ---
-![](https://s2.loli.net/2023/03/05/zYSuPGQB6O2fgoX.webp)
+![](/images/1173768958_zYSuPGQB6O2fgoX.webp)
 
 ### 数据仓库是什么
 

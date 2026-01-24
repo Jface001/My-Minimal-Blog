@@ -5,9 +5,9 @@ description:
 tags: [周更挑战]
 category: 普通生活
 author: 惊羽
-cover: https://s2.loli.net/2023/04/30/e1L28HsGlKufMXb.png
+cover: /images/1560601045_e1L28HsGlKufMXb.png
 ---
-![](https://s2.loli.net/2023/04/30/e1L28HsGlKufMXb.png)
+![](/images/1560601045_e1L28HsGlKufMXb.png)
 
 假期第一天没有出门，想着再不做点什么浪费我美好的假期，于是看完《读库2301》之后临时约 22 点场，出门那一刻心情非常愉悦，今天焦虑抑郁愤怒的情绪消失殆尽。
 

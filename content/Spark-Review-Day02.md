@@ -76,7 +76,7 @@ resultRDD.coalease(1).forchePartition
 		只能开启功能以后，SparkSQL程序在运行计算时，依据Shuffle数据量自动设置分区数目
 ```
 
-![图1](https://i.loli.net/2021/09/07/52ERDKFvjp6qWkb.png)
+![图1](/images/90701759_52ERDKFvjp6qWkb.png)
 
 
 
@@ -90,7 +90,7 @@ resultRDD.coalease(1).forchePartition
 比如小表数据大小为12M，完全可以采用广播JOIN方式，此时调整 广播表里大小阈值
 ```
 
-![图2](https://i.loli.net/2021/09/07/lFiBTV2c1WqhYOR.png)
+![图2](/images/1461256180_lFiBTV2c1WqhYOR.png)
 
 
 
@@ -108,14 +108,14 @@ resultRDD.coalease(1).forchePartition
 		spark.streaming.kafka.maxRatePerPartition
 ```
 
-![图3](https://i.loli.net/2021/09/07/UAnNqGPmu4cKHtJ.png)
+![图3](/images/1309967413_UAnNqGPmu4cKHtJ.png)
 
 ```
 	2）、StructuredStreaming参数：
 		maxOffsetsPreTrigger，每次触发时，消费最大偏移量
 ```
 
-![图4](https://i.loli.net/2021/09/07/A2txYP86wpjNGXO.png)
+![图4](/images/824495670_A2txYP86wpjNGXO.png)
 
 
 
@@ -138,14 +138,14 @@ resultRDD.coalease(1).forchePartition
 	顾名思义，要处理的数据就在同一个本地进程中，即数据和Task在同一个Executor JVM中，这种情况就是RDD的数据在之前就已经被缓存过了，因为BlockManager是以Executor为单位的，所以只要Task所需要的Block在所属的Executor的BlockManager上已经被缓存，这个数据本地性就是PROCESS_LOCAL，这种是最好的locality，这种情况下数据不需要在网络中传输。
 ```
 
-![图5](https://i.loli.net/2021/09/07/vte8XGdYcxpCraw.png)
+![图5](/images/1425017282_vte8XGdYcxpCraw.png)
 
 ```
 2、NODE_LOCAL：
 	数据在同一台节点上，但是并不不在同一个jvm中，比如数据在同一台节点上的另外一个Executor上，速度要比PROCESS_LOCAL略慢。还有一种情况是读取HDFS的块就在当前节点上，数据本地性也是NODE_LOCAL。
 ```
 
-![图6](https://i.loli.net/2021/09/07/2T8MwE5Sin6V7UH.png)
+![图6](/images/1193413515_2T8MwE5Sin6V7UH.png)
 
 
 
@@ -159,7 +159,7 @@ resultRDD.coalease(1).forchePartition
 	数据在同一机架上的其它节点，需要经过网络传输，速度要比NODE_LOCAL慢。
 ```
 
-![图7](https://i.loli.net/2021/09/07/t1VIFcsWBr4ZgPM.png)
+![图7](/images/1882059440_t1VIFcsWBr4ZgPM.png)
 
 
 
@@ -210,7 +210,7 @@ resultRDD.coalease(1).forchePartition
 	将小表数据采用广播变量的方式，把数据广播到大表的每个分区中，进行JOIN
 ```
 
-![图8](https://i.loli.net/2021/09/07/yG1Qb5OcD7U3du8.png)
+![图8](/images/1832723980_yG1Qb5OcD7U3du8.png)
 
 ```
 Broadcast Join的条件有以下几个：
@@ -233,7 +233,7 @@ Broadcast Join的条件有以下几个：
 	tableA表1个分区  仅仅   tableB表1个分区  数据进行JOIN
 ```
 
-![图9](https://i.loli.net/2021/09/07/nHlFXP6vsZEiqz1.png)
+![图9](/images/389043108_nHlFXP6vsZEiqz1.png)
 
 
 
@@ -250,7 +250,7 @@ Broadcast Join的条件有以下几个：
 	最后，表对表的 分区数据进行JOIN，此时关联时，不会扫描整个分区中数据
 ```
 
-![图10](https://i.loli.net/2021/09/07/EYsfzkWZe4Hwl5t.png)
+![图10](/images/845321723_EYsfzkWZe4Hwl5t.png)
 
 
 

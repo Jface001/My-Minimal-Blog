@@ -5,9 +5,9 @@ description:
 tags: [周更挑战, 读书]
 category: 阅读
 author: 惊羽
-cover: https://s2.loli.net/2022/12/17/Nsp3iElyHnRMoID.jpg
+cover: /images/416870657_Nsp3iElyHnRMoID.jpg
 ---
-![鼠王封面](https://s2.loli.net/2022/12/17/Nsp3iElyHnRMoID.jpg)
+![鼠王封面](/images/416870657_Nsp3iElyHnRMoID.jpg)
 
 频繁在机核的播客里被安利《鼠王》，忘记哪一期节目，介绍了《美国众神》的作者尼尔盖曼作品，就提到通俗奇幻小说的发展史。目前的这类奇幻类小说主要分三类：旧时代民间传说、克苏鲁世界、新怪谈，当然还有史蒂芬金自己独特的体系，不在讨论范围之内。当时就很好奇，为啥新怪谈叫新怪谈，新在哪里。最近机核上了鼠王有声书版本，听音频书容易分神，趁着热度火速去读了鼠王。 
 

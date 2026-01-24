@@ -5,9 +5,9 @@ description:
 tags: [SQL, Hive, ClickHouse]
 category: 日常工作
 author: 惊羽
-cover: https://s2.loli.net/2023/05/21/lP8Suqn4pGEzkUT.png
+cover: /images/1850410786_lP8Suqn4pGEzkUT.png
 ---
-![](https://s2.loli.net/2023/05/21/lP8Suqn4pGEzkUT.png)
+![](/images/1850410786_lP8Suqn4pGEzkUT.png)
 
 > 本文由 chatGPT 生成，可能存在一定错误，请读者自行甄别。
 

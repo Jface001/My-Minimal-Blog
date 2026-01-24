@@ -5,9 +5,9 @@ description:
 tags: [周更挑战, Hadoop]
 category: 数据仓库
 author: 惊羽
-cover: https://s2.loli.net/2023/02/19/M26ChZ8XJWpxbNv.png
+cover: /images/203903550_M26ChZ8XJWpxbNv.png
 ---
-![](https://s2.loli.net/2023/02/19/M26ChZ8XJWpxbNv.png)记录一下曾经学习 Hadoop 的笔记，温故知新，现在 Hadoop 已经到 3.x 版本，但是很多机制跟原理还是一致的。
+![](/images/203903550_M26ChZ8XJWpxbNv.png)记录一下曾经学习 Hadoop 的笔记，温故知新，现在 Hadoop 已经到 3.x 版本，但是很多机制跟原理还是一致的。
 
 ### HDFS分布式文件系统
 

@@ -13,7 +13,7 @@ cover: /images/spark.svg
 
 ## 1、Spark 框架概念
 
-![图1](https://i.loli.net/2021/09/06/LBadXZ5iyTtYvSg.png)
+![图1](/images/578536947_LBadXZ5iyTtYvSg.png)
 
 ```
 Apache Spark™ is a unified analytics engine for large-scale data processing.
@@ -29,7 +29,7 @@ Apache Spark™ is a unified analytics engine for large-scale data processing.
 	类似MapReduce对海量数据处理分析
 ```
 
-![图2](https://i.loli.net/2021/09/06/h8eibz9poSO13Pu.png)
+![图2](/images/1136549919_h8eibz9poSO13Pu.png)
 
 ```
 unified 统一不仅仅是分析，也可以指：Spark 分析数据时，可以时任意数据源
@@ -49,11 +49,11 @@ unified 统一不仅仅是分析，也可以指：Spark 分析数据时，可以
 第二、Spark Job调度以DAG方式，并且每个任务Task执行以线程（Thread）方式，并不是像MapReduce以进程（Process）方式执行。
 ```
 
-![图3](https://i.loli.net/2021/09/06/XtxmcTysVnEBSrR.png)
+![图3](/images/721786484_XtxmcTysVnEBSrR.png)
 
 > Spark与MapReduce最大不同：[提供数据结构RDD弹性分布式数据集。]()
 
-![图4](https://i.loli.net/2021/09/06/NpW5Pehzy2AwM7J.png)
+![图4](/images/1376248740_NpW5Pehzy2AwM7J.png)
 
 
 
@@ -65,20 +65,20 @@ unified 统一不仅仅是分析，也可以指：Spark 分析数据时，可以
 
 > 1、RDD是什么，官方定义：[不可变、分区的、并行计算的集合，抽象概念]()
 
-![图5](https://i.loli.net/2021/09/06/sp8T1F39igfHqWv.png)
+![图5](/images/1394271250_sp8T1F39igfHqWv.png)
 
 > 2、每个RDD内部有5个特性
 >
 > - 分区组成、每个分区被计算处理、依赖一些列RDD
 > - 可选的：KeyValue类型RDD可以设置分区器，对每个分区数据处理时找到最佳位置（数据本地性）
 
-![图6](https://i.loli.net/2021/09/06/Nkbi3qxwF1fnEcO.png)
+![图6](/images/654077871_Nkbi3qxwF1fnEcO.png)
 
 
 
 > 3、常见RDD，[RDD抽象类，泛型，表示具体存储数据类型未知，可以是任何类型。]()
 
-![图7](https://i.loli.net/2021/09/06/OKHzQcLeiv2uEfk.png)
+![图7](/images/1016651021_OKHzQcLeiv2uEfk.png)
 
 ```
 1、HadoopRDD，表示从文件系统加载数据封装的集合
@@ -108,7 +108,7 @@ unified 统一不仅仅是分析，也可以指：Spark 分析数据时，可以
 	DataFrame = Dataset[Row]
 ```
 
-![图8](https://i.loli.net/2021/09/06/iRcO1XegMI4rwN7.png)
+![图8](/images/277494310_iRcO1XegMI4rwN7.png)
 
 > 从Spark 2.x开始，建议大家使用数据结构为Dataset/DataFrame，因此使用SparkSQL模块分析数据。
 
@@ -134,17 +134,17 @@ Spark Application运行有2种DeployMode：
 
 > `yarn-client`，测试使用
 
-![图9](https://i.loli.net/2021/09/06/Y9Uv8x61aCOydqp.png)
+![图9](/images/771950387_Y9Uv8x61aCOydqp.png)
 
 
 
 > `yarn-cluster`，生成环境运行方式
 
-![图10](https://i.loli.net/2021/09/06/hpHweAk9f4JGtNU.png)
+![图10](/images/1088506273_hpHweAk9f4JGtNU.png)
 
 
 
-![图11](https://i.loli.net/2021/09/06/AthRJxlM8Ir34d9.png)
+![图11](/images/1320805821_AthRJxlM8Ir34d9.png)
 
 
 
@@ -154,7 +154,7 @@ Spark Application运行有2种DeployMode：
 
 > 词频统计WordCount程序执行DAG图
 
-![图12](https://i.loli.net/2021/09/06/UcAPhtBTkDafM9x.png)
+![图12](/images/67837947_UcAPhtBTkDafM9x.png)
 
 
 
@@ -191,7 +191,7 @@ Spark Application运行有2种DeployMode：
 	
 ```
 
-![图13](https://i.loli.net/2021/09/06/sJbErFfSDTlMBGp.png)
+![图13](/images/1459400559_sJbErFfSDTlMBGp.png)
 
 ```scala
 package cn.test.spark
@@ -250,7 +250,7 @@ object SparkWordCount {
 
 ```
 
-![图14](https://i.loli.net/2021/09/06/pX9NdjS1q7s2yzM.png)
+![图14](/images/1851487544_pX9NdjS1q7s2yzM.png)
 
 
 
@@ -263,7 +263,7 @@ object SparkWordCount {
 > - **窄依赖**：1对1，父RDD1个分区数据对应子RDD1个分区数据
 > - `宽依赖`：1对多，父RDD1个分区数据对应子RDD多个分区数据
 
-![图15](https://i.loli.net/2021/09/06/uPGhXzADYrBcZOw.png)
+![图15](/images/2119326905_uPGhXzADYrBcZOw.png)
 
 
 
@@ -279,5 +279,5 @@ Spark Shuffle 分为2个部分：
 		读取Shuffle到磁盘中数据，进行处理
 ```
 
-![图16](https://i.loli.net/2021/09/06/2Wmqk5Rigp63oVG.png)
+![图16](/images/559727038_2Wmqk5Rigp63oVG.png)
 

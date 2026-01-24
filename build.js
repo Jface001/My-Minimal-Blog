@@ -36,11 +36,18 @@ fs.mkdirSync(path.join(config.outDir, 'categories'));
 // Copy CSS
 fs.copyFileSync(path.join(config.srcDir, 'style.css'), path.join(config.outDir, 'style.css'));
 
-// Copy Images if exist
+// Copy Images if exist (Both manual and downloaded images)
 if (fs.existsSync(config.imagesDir)) {
     const images = fs.readdirSync(config.imagesDir);
     images.forEach(img => {
-        fs.copyFileSync(path.join(config.imagesDir, img), path.join(config.outDir, 'images', img));
+        // Skip hidden files like .DS_Store
+        if (img.startsWith('.')) return;
+        
+        const srcPath = path.join(config.imagesDir, img);
+        // Only copy files, not directories
+        if (fs.statSync(srcPath).isFile()) {
+            fs.copyFileSync(srcPath, path.join(config.outDir, 'images', img));
+        }
     });
 }
 

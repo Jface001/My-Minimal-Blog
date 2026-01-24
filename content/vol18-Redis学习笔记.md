@@ -5,9 +5,9 @@ description:
 tags: [周更挑战, Redis]
 category: Spark
 author: 惊羽
-cover: https://s2.loli.net/2023/04/09/vbMKrozntPH8IcV.png
+cover: /images/1102662437_vbMKrozntPH8IcV.png
 ---
-![](https://s2.loli.net/2023/04/09/vbMKrozntPH8IcV.png)
+![](/images/1102662437_vbMKrozntPH8IcV.png)
 
 ### 基本介绍
 
@@ -217,7 +217,7 @@ cover: https://s2.loli.net/2023/04/09/vbMKrozntPH8IcV.png
 
 - - 过程示意图
 
-![](https://s2.loli.net/2023/04/09/ghcf9Pq7TBy1pAk.png)
+![](/images/1959448541_ghcf9Pq7TBy1pAk.png)
 
 
 
@@ -270,7 +270,7 @@ cover: https://s2.loli.net/2023/04/09/vbMKrozntPH8IcV.png
 
 - - 过程示意图
 
-![](https://s2.loli.net/2023/04/09/eV62IsqmAdXlfYF.png)
+![](/images/1955927911_eV62IsqmAdXlfYF.png)
 
 
 
@@ -353,7 +353,7 @@ cover: https://s2.loli.net/2023/04/09/vbMKrozntPH8IcV.png
 
 - - 消息队列概念
 
-![](https://s2.loli.net/2023/04/09/4hZYDStKay1GwHW.png)
+![](/images/235517361_4hZYDStKay1GwHW.png)
 
 
 
@@ -446,7 +446,7 @@ cover: https://s2.loli.net/2023/04/09/vbMKrozntPH8IcV.png
 - - 解决问题: Redis单点故障
   - 架构图
 
-![](https://s2.loli.net/2023/04/09/iymDCp7sIakOz2E.png)
+![](/images/482354737_iymDCp7sIakOz2E.png)
 
 
 
@@ -493,7 +493,7 @@ cover: https://s2.loli.net/2023/04/09/vbMKrozntPH8IcV.png
 - - 解决问题: 主从复制集群中Master的单点故障问题
   - 架构图
 
-![](https://s2.loli.net/2023/04/09/n3X7gK1VC52FlBq.png)
+![](/images/344779752_n3X7gK1VC52FlBq.png)
 
 - - 设计
 
@@ -539,7 +539,7 @@ cover: https://s2.loli.net/2023/04/09/vbMKrozntPH8IcV.png
 - - 解决问题:单点故障+单台内存过小
   - 架构图
 
-![](https://s2.loli.net/2023/04/09/ZmXHf8gywdPqTOa.png)
+![](/images/1476682911_ZmXHf8gywdPqTOa.png)
 
 
 

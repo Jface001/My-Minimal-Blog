@@ -5,9 +5,9 @@ description:
 tags: [周更挑战]
 category: MySQL
 author: 惊羽
-cover: https://s2.loli.net/2023/01/15/FgLoEhyf589UCZN.jpg
+cover: /images/1745335562_FgLoEhyf589UCZN.jpg
 ---
-![](https://s2.loli.net/2023/01/15/FgLoEhyf589UCZN.jpg)
+![](/images/1745335562_FgLoEhyf589UCZN.jpg)
 
 MySQL 是工作当中经常使用到一个开源数据库，我当前工作主要使用 MySQL 作为报表存储数据库，以及承接数据提供给到下游业务使用。使用过程中遇到很多很多坑，都是小问题但是碰到了处理起来也是比较繁琐，特别记录一下。
 

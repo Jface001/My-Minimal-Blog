@@ -5,9 +5,9 @@ description:
 tags: [周更挑战, 读书]
 category: 阅读
 author: 惊羽
-cover: https://s2.loli.net/2023/01/29/kdUmy6Pa5NFoquL.jpg
+cover: /images/729414384_kdUmy6Pa5NFoquL.jpg
 ---
-![](https://s2.loli.net/2023/01/29/kdUmy6Pa5NFoquL.jpg)
+![](/images/729414384_kdUmy6Pa5NFoquL.jpg)
 
 《连城诀》被评价作金庸的十五部武侠小说中最具现实主义、批判主义的一部，里面写尽了人性的阴暗面，金庸先生这部小说里要探讨的就是人性的肮脏罪恶。我是第二遍看这部小说了，读到万震山半夜梦游砌墙的情节，还是觉得瘆得慌。我总觉得金庸先生是以最恶意的角度去塑造书中的人物的，对于书中的各个人物我都是以消极负面地角度去看待他的行为的。鲁迅曾说：
 
