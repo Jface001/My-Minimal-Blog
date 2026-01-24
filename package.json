@@ -7,6 +7,7 @@
   "scripts": {
     "build": "node build.js",
     "dev": "node build.js && npx serve public",
+    "deploy": "npm run build && npx wrangler pages deploy public",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
