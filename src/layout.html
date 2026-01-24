@@ -31,11 +31,11 @@
                 if (isDark) {
                     body.classList.add('dark-mode');
                     if (icon) icon.textContent = '☀️';
-                    updateGiscusTheme('dark'); // 夜间模式用 dark 主题
+                    updateGiscusTheme('transparent_dark'); // 夜间模式用透明深色，完美融入背景
                 } else {
                     body.classList.remove('dark-mode');
                     if (icon) icon.textContent = '🌙';
-                    updateGiscusTheme('light_high_contrast'); // 白天模式用高对比度亮色
+                    updateGiscusTheme('light'); // 白天模式用标准亮色，最经典清晰
                 }
             }
 
