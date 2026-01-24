@@ -262,10 +262,10 @@ posts.forEach(post => {
         <div id="comments-section" style="margin-top: 50px; padding-top: 20px; border-top: 1px solid var(--border-color);">
             <h3>评论与互动</h3>
             <script src="https://giscus.app/client.js"
-                data-repo="jface/my-minimal-blog"
-                data-repo-id="R_kgDOK9X8og"
+                data-repo="Jface001/My-Minimal-Blog"
+                data-repo-id="R_kgDONsU0_w"
                 data-category="Announcements"
-                data-category-id="DIC_kwDOK9X8os4Cb_1_"
+                data-category-id="DIC_kwDONsU0_84CmI6Q"
                 data-mapping="pathname"
                 data-strict="0"
                 data-reactions-enabled="1"
@@ -294,8 +294,9 @@ const generatePostListHtml = (postList) => {
                         <a href="/${post.slug}.html" class="post-title">${post.title}</a>
                         ${post.description ? `<p class="post-desc">${post.description}</p>` : ''}
                         <div class="post-item-meta">
-                            <div class="meta-primary">
+                            <div class="meta-primary" style="flex-wrap: wrap;">
                                 <span class="meta-item">${formatDate(post.date)}</span>
+                                ${tagsHtml ? `<span class="meta-sep">·</span>${tagsHtml}` : ''}
                             </div>
                         </div>
                     </div>
