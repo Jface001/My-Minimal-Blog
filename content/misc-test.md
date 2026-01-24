@@ -1,6 +1,6 @@
 ---
 title: 杂货铺的第一篇文章
-date: 2023-10-29
+date: 2026-01-24
 description: 这是一篇测试新增分类的文章。
 tags: [生活, 随笔]
 category: 杂货铺

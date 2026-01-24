@@ -88,12 +88,25 @@ files.forEach(file => {
             description = plainText.substring(0, 150) + (plainText.length > 150 ? '...' : '');
         }
 
+        // TOC toggle script handling
+        // Move inline script logic to global layout script for smoother transitions if needed
+        // For now, we keep it simple.
+
+        // Handle tags: Support both array (new format) and space-separated string (old hexo format)
+        let tags = [];
+        if (Array.isArray(data.attributes.tags)) {
+            tags = data.attributes.tags;
+        } else if (typeof data.attributes.tags === 'string') {
+            // Split by space, comma, or brackets if present
+            tags = data.attributes.tags.split(/[\s,\[\]]+/).filter(t => t.length > 0);
+        }
+
         // Save post data
         const postData = {
             title: data.attributes.title,
             date: data.attributes.date,
             description: description,
-            tags: data.attributes.tags || [],
+            tags: tags,
             category: data.attributes.category || '未分类',
             slug: slug,
             body: data.body, // Store body for second pass
@@ -167,9 +180,20 @@ posts.forEach(post => {
     
     // Override heading renderer to collect TOC items and add IDs
     renderer.heading = function({ text, depth, raw }) {
-        // Safe check for raw string
-        const safeRaw = raw || text || '';
-        const anchor = safeRaw.toString().toLowerCase().replace(/[^\w\u4e00-\u9fa5]+/g, '-');
+        // Use text content for ID generation, NOT raw (which includes ## prefix)
+        const content = text || '';
+        
+        // Robust ID generation
+        let anchor = content.toString().toLowerCase()
+            .trim()
+            .replace(/\s+/g, '-')          // Replace spaces with -
+            .replace(/[^\w\u4e00-\u9fa5\-]+/g, '') // Remove all non-word chars
+            .replace(/\-\-+/g, '-');       // Replace multiple - with single -
+            
+        // Fallback for empty anchors
+        if (!anchor || anchor.length === 0) {
+            anchor = `section-${toc.length}`;
+        }
         
         toc.push({
             anchor: anchor,
@@ -212,17 +236,6 @@ posts.forEach(post => {
                 </ul>
             </div>
         </div>
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                const toggle = document.getElementById('toc-toggle');
-                const content = document.getElementById('toc-content');
-                if (toggle && content) {
-                    toggle.addEventListener('click', function() {
-                        content.classList.toggle('show');
-                    });
-                }
-            });
-        </script>
         `;
     }
 
@@ -302,7 +315,23 @@ const generatePostListHtml = (postList) => {
 };
 
 // Render Index
-renderPage('首页', '欢迎来到我的极简博客', generatePostListHtml(posts), 'index.html');
+const RECENT_POSTS_LIMIT = 10;
+const recentPosts = posts.slice(0, RECENT_POSTS_LIMIT);
+const viewAllLink = `
+    <div style="text-align: center; margin-top: 40px;">
+        <a href="/archives.html" style="display: inline-block; padding: 10px 20px; border: 1px solid var(--border-color); border-radius: 6px; text-decoration: none; color: var(--text-color); font-family: var(--font-primary); transition: all 0.2s;">
+            查看所有文章 (${posts.length})
+        </a>
+    </div>
+`;
+renderPage('首页', '欢迎来到我的极简博客', generatePostListHtml(recentPosts) + viewAllLink, 'index.html');
+
+// Render Archives Page
+const archivesHtml = `
+    <h1 style="margin-bottom: 40px;">所有文章</h1>
+    ${generatePostListHtml(posts)}
+`;
+renderPage('归档', '所有文章列表', archivesHtml, 'archives.html');
 
 // Render Tag Pages
 tagsMap.forEach((tagPosts, tag) => {

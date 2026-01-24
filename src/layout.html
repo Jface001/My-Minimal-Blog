@@ -8,38 +8,206 @@
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
     <script>
-        // 夜间模式逻辑
-        document.addEventListener('DOMContentLoaded', function() {
-            const toggleBtn = document.getElementById('theme-toggle');
-            const body = document.body;
-            const icon = toggleBtn.querySelector('span');
-            
-            // 1. 检查本地存储
-            const savedTheme = localStorage.getItem('theme');
-            if (savedTheme) {
-                if (savedTheme === 'dark') body.classList.add('dark-mode');
-            } else {
-                // 2. 如果没有本地存储，检查时间 (19:00 - 06:00)
-                const hour = new Date().getHours();
-                if (hour >= 19 || hour < 6) {
+        // 夜间模式逻辑 (优化版 - 事件委托)
+        (function() {
+            // 核心切换逻辑
+            function applyTheme(isDark) {
+                const body = document.body;
+                const icon = document.querySelector('#theme-toggle span');
+                
+                if (isDark) {
                     body.classList.add('dark-mode');
+                    if (icon) icon.textContent = '☀️';
+                } else {
+                    body.classList.remove('dark-mode');
+                    if (icon) icon.textContent = '🌙';
                 }
             }
-            
-            // 更新图标
-            updateIcon();
 
-            // 3. 点击切换
-            toggleBtn.addEventListener('click', () => {
-                body.classList.toggle('dark-mode');
-                const isDark = body.classList.contains('dark-mode');
-                localStorage.setItem('theme', isDark ? 'dark' : 'light');
-                updateIcon();
+            // 初始化
+            function initTheme() {
+                const savedTheme = localStorage.getItem('theme');
+                if (savedTheme) {
+                    applyTheme(savedTheme === 'dark');
+                } else {
+                    // Fallback to system preference first, then time
+                    // 优先检查系统是否是深色模式
+                    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                        applyTheme(true);
+                    } else {
+                        const hour = new Date().getHours();
+                        applyTheme(hour >= 19 || hour < 6);
+                    }
+                }
+            }
+
+            // 页面加载时初始化
+            document.addEventListener('DOMContentLoaded', initTheme);
+
+            // 暴露给全局，供 SPA 跳转后调用
+            window.refreshTheme = initTheme;
+
+            // 事件委托 - 解决任何可能的事件丢失问题
+            document.addEventListener('click', function(e) {
+                // 查找点击目标是否是 theme-toggle 或其子元素
+                const toggleBtn = e.target.closest('#theme-toggle');
+                if (toggleBtn) {
+                    e.preventDefault(); // 阻止可能的默认行为
+                    e.stopPropagation(); // 阻止冒泡
+                    
+                    const body = document.body;
+                    // 切换状态
+                    const isDark = body.classList.toggle('dark-mode');
+                    
+                    // 保存并更新UI
+                    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+                    
+                    // 手动更新图标，不依赖 applyTheme 的判断逻辑
+                    const icon = toggleBtn.querySelector('span');
+                    if (icon) {
+                        icon.textContent = isDark ? '☀️' : '🌙';
+                    }
+                    
+                    return; // 处理完直接返回
+                }
+
+                // Global Event Delegation for TOC (移到这里统一管理)
+                // 使用 closest 确保即使点击内部元素也能触发
+                const tocToggle = e.target.closest('#toc-toggle');
+                if (tocToggle) {
+                    const content = document.getElementById('toc-content');
+                    if (content) {
+                        content.classList.toggle('show');
+                    }
+                }
+            });
+        })();
+
+        // Simple Client-Side Router (SPA Behavior)
+        document.addEventListener('DOMContentLoaded', () => {
+            // Check if View Transitions are supported, if so, we can rely on them for smooth native feeling
+            // But we still might want PJAX for instant feel and no white flash.
+            
+            document.body.addEventListener('click', async (e) => {
+                const link = e.target.closest('a');
+                // Ignore external links, anchors, or if modifier keys are pressed
+                if (!link || 
+                    link.origin !== location.origin || 
+                    link.getAttribute('target') === '_blank' || 
+                    e.ctrlKey || e.metaKey || e.shiftKey || e.altKey
+                ) {
+                    return;
+                }
+
+                const href = link.getAttribute('href');
+                
+                // 关键修复：如果是锚点链接（#开头），则走原生跳转，不要拦截！
+                // 使用 getAttribute 获取原始值，因为 link.href 总是返回绝对路径
+                if (href && (href.startsWith('#') || href.includes('#'))) {
+                    // 如果是纯锚点，或者是当前页面的锚点
+                    const url = new URL(link.href);
+                    // 忽略 query string 差异，只看 pathname
+                    if (url.pathname === location.pathname) {
+                        // Let browser handle anchor scroll
+                        return; 
+                    }
+                }
+
+                e.preventDefault();
+
+                // Use View Transition if available
+                if (document.startViewTransition) {
+                    document.startViewTransition(async () => {
+                        await loadPage(href);
+                    });
+                } else {
+                    // Fallback for older browsers
+                    await loadPage(href);
+                }
             });
 
-            function updateIcon() {
-                const isDark = body.classList.contains('dark-mode');
-                icon.textContent = isDark ? '☀️' : '🌙';
+            window.addEventListener('popstate', async () => {
+                await loadPage(location.pathname, false);
+            });
+
+            async function loadPage(url, push = true) {
+                try {
+                    // Fetch the new page
+                    const response = await fetch(url);
+                    const text = await response.text();
+                    
+                    // Parse HTML
+                    const parser = new DOMParser();
+                    const newDoc = parser.parseFromString(text, 'text/html');
+                    
+                    // Replace Main Content
+                    const newMain = newDoc.querySelector('main');
+                    const currentMain = document.querySelector('main');
+                    if (newMain && currentMain) {
+                        currentMain.innerHTML = newMain.innerHTML;
+                    }
+
+                    // Update Title
+                    document.title = newDoc.title;
+
+                    // Update History
+                    if (push) {
+                        history.pushState({}, '', url);
+                    }
+                    
+                    // Re-apply Theme (Crucial for SPA)
+                    if (window.refreshTheme) {
+                        window.refreshTheme();
+                    }
+
+                    // Re-run scripts (Highlight.js, Giscus)
+                    // 1. Highlight.js
+                    if (window.hljs) {
+                        window.hljs.highlightAll();
+                    }
+
+                    // 2. Re-inject Scripts (like Giscus)
+                    const newScripts = newMain.querySelectorAll('script');
+                    newScripts.forEach(oldScript => {
+                        const newScript = document.createElement('script');
+                        Array.from(oldScript.attributes).forEach(attr => {
+                            newScript.setAttribute(attr.name, attr.value);
+                        });
+                        newScript.textContent = oldScript.textContent;
+                        // Replace the old script placeholder with executable script
+                        const placeholder = currentMain.querySelector(`script[src="${oldScript.src}"]`) || currentMain.querySelector('script'); 
+                        if (oldScript.parentNode) {
+                             const containerId = oldScript.parentElement.id;
+                             if (containerId) {
+                                 const container = document.getElementById(containerId);
+                                 if (container) {
+                                     container.innerHTML = ''; // Clear to prevent dupes if any
+                                     container.appendChild(newScript);
+                                 }
+                             }
+                        }
+                    });
+                    
+                    // 滚动处理逻辑优化：
+                    // 如果 URL 带有 hash，尝试滚动到对应元素
+                    if (window.location.hash) {
+                        const id = window.location.hash.slice(1);
+                        // 使用 decodeURIComponent 解决中文锚点问题
+                        const target = document.getElementById(decodeURIComponent(id));
+                        if (target) {
+                            target.scrollIntoView();
+                        } else {
+                            window.scrollTo(0, 0);
+                        }
+                    } else {
+                        // 如果没有 hash，才滚动到顶部
+                        window.scrollTo(0, 0);
+                    }
+
+                } catch (err) {
+                    console.error('Navigation failed:', err);
+                    window.location.href = url; // Fallback to full reload
+                }
             }
         });
     </script>

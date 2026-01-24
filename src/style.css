@@ -1,6 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
 
+/* View Transitions API */
+@view-transition {
+    navigation: auto;
+}
+
+html {
+    scroll-behavior: auto; /* 禁用全局平滑滚动，防止 SPA 跳转时出现奇怪的滚动动画 */
+}
+
 :root {
     /* 暖色调主题 (Warm Theme) - 修复版 */
     --bg-color: #f7f5eb; /* 更加明显的米黄色/羊皮纸色，拒绝惨白 */
@@ -16,8 +25,6 @@
     --font-primary: "Noto Serif SC", "Source Han Serif SC", "Songti SC", serif;
     --font-mono: "JetBrains Mono", "Fira Code", "Menlo", monospace;
 }
-
-/* 暂时移除暗黑模式，以确保在所有设备上都显示一致的暖色风格，避免“白色字体刺眼”的问题 */
 
 body {
     background-color: var(--bg-color);
@@ -196,16 +203,16 @@ header nav a::after {
     }
 }
 
-/* 夜间模式适配 */
-@media (prefers-color-scheme: dark) {
-    .post-item {
-        background: transparent;
-        border-bottom-color: rgba(255,255,255,0.1);
-    }
-    
-    .post-desc {
-        color: #a0a0a0;
-    }
+/* 夜间模式适配 - 仅在使用 dark-mode 类时生效 */
+body.dark-mode {
+    --bg-color: #1a1b1e;
+    --text-color: #c1c2c5;
+    --heading-color: #e4e5e7;
+    --accent-color: #ff8787;
+    --link-color: #a5d8ff;
+    --meta-color: #909296;
+    --border-color: #2c2e33;
+    --code-bg: #25262b;
 }
 
 body.dark-mode .post-item {
@@ -213,10 +220,14 @@ body.dark-mode .post-item {
     border-bottom-color: rgba(255,255,255,0.1);
 }
 
-body.dark-mode .post-desc {
-    color: #a0a0a0;
+body.dark-mode .tag-small, 
+body.dark-mode .tag {
+    background-color: transparent;
 }
-.category-link {
+
+body.dark-mode img {
+    opacity: 0.9;
+}
     color: var(--accent-color);
     font-weight: 600;
     text-decoration: none;
@@ -341,65 +352,8 @@ body.dark-mode .post-desc {
     color: var(--accent-color);
 }
 
-/* 夜间模式支持 */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --bg-color: #1a1b1e; /* 深灰偏蓝黑，护眼 */
-        --text-color: #c1c2c5; /* 柔和灰白 */
-        --heading-color: #e4e5e7;
-        --accent-color: #ff8787; /* 柔和的淡红 */
-        --link-color: #a5d8ff; /* 淡蓝 */
-        --meta-color: #909296;
-        --border-color: #2c2e33;
-        --code-bg: #25262b;
-    }
-    
-    .post-item {
-        background: transparent;
-        border-bottom-color: rgba(255,255,255,0.1);
-    }
-    
-    .post-item:hover {
-        border-color: rgba(255,255,255,0.1);
-    }
-
-    .tag-small, .tag {
-        background-color: transparent;
-    }
-    
-    a:hover {
-        background-color: rgba(255, 135, 135, 0.1);
-    }
-    
-    img {
-        opacity: 0.9; /* 夜间模式图片稍微暗一点，不刺眼 */
-    }
-}
-
 /* 强制夜间模式 (通过 JS 触发) */
-body.dark-mode {
-    --bg-color: #1a1b1e;
-    --text-color: #c1c2c5;
-    --heading-color: #e4e5e7;
-    --accent-color: #ff8787;
-    --link-color: #a5d8ff;
-    --meta-color: #909296;
-    --border-color: #2c2e33;
-    --code-bg: #25262b;
-}
-
-body.dark-mode .post-item {
-    border-bottom-color: rgba(255,255,255,0.1);
-}
-
-body.dark-mode .tag-small, 
-body.dark-mode .tag {
-    background-color: transparent;
-}
-
-body.dark-mode img {
-    opacity: 0.9;
-}
+/* 这里的代码已经在上面合并了，移除重复部分 */
 
 /* 列表页图片 */
 .post-cover {
