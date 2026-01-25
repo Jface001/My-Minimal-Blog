@@ -270,9 +270,9 @@ posts.forEach(post => {
             <h3>评论与互动</h3>
             <script src="https://giscus.app/client.js"
                 data-repo="Jface001/My-Minimal-Blog"
-                data-repo-id="R_kgDONsU0_w"
+                data-repo-id="R_kgDORATB3w"
                 data-category="General"
-                data-category-id="DIC_kwDONsU0_84CmI6K"
+                data-category-id="DIC_kwDORATB384C1XmX"
                 data-mapping="pathname"
                 data-strict="0"
                 data-reactions-enabled="1"
