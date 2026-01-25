@@ -124,16 +124,16 @@ git push -u origin main
 等待几秒钟，你的博客就上线了！Cloudflare 会分配一个二级域名（如 `my-blog.pages.dev`）。
 
 ## 🌐 绑定私人域名
-
-如果你有自己的域名（例如 `jingyuu.top`），可以绑定到 Cloudflare Pages：
-
-1. 在 Cloudflare Pages 项目页面，点击 **Custom domains** 选项卡。
-2. 点击 **Set up a custom domain**。
-3. 输入你的域名（例如 `blog.jingyuu.top` 或 `jingyuu.top`）。
-4. Cloudflare 会提示你添加 DNS 记录：
-   - 如果你的域名 DNS 已经在 Cloudflare 托管：它会自动添加记录，点击确认即可。
-   - 如果在其他服务商（如阿里云、腾讯云）：去你的域名服务商后台，添加一条 `CNAME` 记录，指向 Cloudflare 提供的地址（例如 `my-blog.pages.dev`）。
-5. 等待 DNS 生效（通常几分钟），访问你的域名即可看到博客！
+127→
+128→如果你有自己的域名，可以绑定到 Cloudflare Pages：
+129→
+130→1. 在 Cloudflare Pages 项目页面，点击 **Custom domains** 选项卡。
+131→2. 点击 **Set up a custom domain**。
+132→3. 输入你的域名。
+133→4. Cloudflare 会提示你添加 DNS 记录：
+134→   - 如果你的域名 DNS 已经在 Cloudflare 托管：它会自动添加记录，点击确认即可。
+135→   - 如果在其他服务商（如阿里云、腾讯云）：去你的域名服务商后台，添加一条 `CNAME` 记录，指向 Cloudflare 提供的地址（例如 `my-blog.pages.dev`）。
+136→5. 等待 DNS 生效（通常几分钟），访问你的域名即可看到博客！
 
 ---
 
