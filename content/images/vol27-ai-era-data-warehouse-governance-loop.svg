@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+<title id="title">数据治理闭环</title>
+<desc id="desc">治理不是文档堆积，而是贯穿开发、服务和使用的工程约束。</desc>
+<defs>
+  <style>
+    .bg{fill:#fbfdff}.title{font:700 34px -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans SC",sans-serif;fill:#111827}.subtitle{font:400 17px -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans SC",sans-serif;fill:#526071}.box-title{font:700 18px -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans SC",sans-serif;fill:#111827}.box-text{font:400 14px -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans SC",sans-serif;fill:#374151}.arrow{stroke:#64748b;stroke-width:3;fill:none;marker-end:url(#arrow)}
+  </style>
+  <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#64748b"/></marker>
+</defs>
+<rect class="bg" width="100%" height="100%" rx="28"/>
+<text class="title" x="48" y="62">数据治理闭环</text>
+<text class="subtitle" x="48" y="94">治理不是文档堆积，而是贯穿开发、服务和使用的工程约束。</text>
+<path class="arrow" d="M320,190 L405,160"/>
+<path class="arrow" d="M615,160 L700,190"/>
+<path class="arrow" d="M805,262 L805,385"/>
+<path class="arrow" d="M700,435 L615,475"/>
+<path class="arrow" d="M405,475 L320,435"/>
+<path class="arrow" d="M215,385 L215,262"/>
+<rect x="110" y="170" width="210" height="92" rx="14" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
+<text class="box-title" x="128" y="202">标准定义</text>
+<text class="box-text" x="128" y="228">命名 分层 指标 契约</text>
+<rect x="405" y="120" width="210" height="92" rx="14" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+<text class="box-title" x="423" y="152">开发交付</text>
+<text class="box-text" x="423" y="178">建模 ETL API</text>
+<text class="box-text" x="423" y="199">特征</text>
+<rect x="700" y="170" width="210" height="92" rx="14" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+<text class="box-title" x="718" y="202">质量监控</text>
+<text class="box-text" x="718" y="228">完整性 一致性 SLA</text>
+<rect x="700" y="385" width="210" height="92" rx="14" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+<text class="box-title" x="718" y="417">安全审计</text>
+<text class="box-text" x="718" y="443">权限 脱敏 日志 合规</text>
+<rect x="405" y="435" width="210" height="92" rx="14" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+<text class="box-title" x="423" y="467">资产运营</text>
+<text class="box-text" x="423" y="493">热度 成本 复用 下线</text>
+<rect x="110" y="385" width="210" height="92" rx="14" fill="#f8fafc" stroke="#475569" stroke-width="2"/>
+<text class="box-title" x="128" y="417">反馈迭代</text>
+<text class="box-text" x="128" y="443">变更 复盘 需求收敛</text>
+</svg>

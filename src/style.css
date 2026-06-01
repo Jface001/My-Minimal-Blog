@@ -735,3 +735,130 @@ footer {
     color: var(--meta-color);
     font-size: 0.9rem;
 }
+
+/* 表格排版优化：适合技术文章里的宽表和中文长字段 */
+.post-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 28px 0 34px;
+    font-size: 0.88rem;
+    line-height: 1.6;
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border: 1px solid rgba(15, 23, 42, 0.10);
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.04);
+}
+
+.post-content table thead,
+.post-content table tbody {
+    display: table;
+    width: 100%;
+    min-width: 100%;
+    table-layout: fixed;
+}
+
+.post-content table:has(tr > :nth-child(3)) thead,
+.post-content table:has(tr > :nth-child(3)) tbody {
+    min-width: 680px;
+}
+
+.post-content table:has(tr > :nth-child(4)) thead,
+.post-content table:has(tr > :nth-child(4)) tbody {
+    min-width: 760px;
+}
+
+.post-content th,
+.post-content td {
+    padding: 10px 12px;
+    border: 1px solid rgba(15, 23, 42, 0.10);
+    vertical-align: top;
+    text-align: left;
+    word-break: break-word;
+}
+
+.post-content table:not(:has(tr > :nth-child(3))) th:first-child,
+.post-content table:not(:has(tr > :nth-child(3))) td:first-child {
+    width: 28%;
+}
+
+.post-content table:not(:has(tr > :nth-child(3))) th:nth-child(2),
+.post-content table:not(:has(tr > :nth-child(3))) td:nth-child(2) {
+    width: 72%;
+}
+
+.post-content table:has(tr > :nth-child(3)):not(:has(tr > :nth-child(4))) th,
+.post-content table:has(tr > :nth-child(3)):not(:has(tr > :nth-child(4))) td {
+    width: 33.333%;
+}
+
+.post-content table:has(tr > :nth-child(4)) th,
+.post-content table:has(tr > :nth-child(4)) td {
+    width: 25%;
+}
+
+.post-content th {
+    background: #f6f8fb;
+    color: #111827;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.post-content tr:nth-child(even) td {
+    background: #fbfcfe;
+}
+
+.post-content td code {
+    white-space: nowrap;
+}
+
+body.dark-mode .post-content table {
+    border-color: rgba(255, 255, 255, 0.12);
+    box-shadow: none;
+    background: #1f2024;
+    scrollbar-color: #4b5563 #24262b;
+}
+
+body.dark-mode .post-content th,
+body.dark-mode .post-content td {
+    border-color: rgba(255, 255, 255, 0.12);
+    color: var(--text-color);
+}
+
+body.dark-mode .post-content th {
+    background: #2b2d33;
+    color: var(--heading-color);
+}
+
+body.dark-mode .post-content tr:nth-child(odd) td {
+    background: #1f2024;
+}
+
+body.dark-mode .post-content tr:nth-child(even) td {
+    background: #24262b;
+}
+
+body.dark-mode .post-content table::-webkit-scrollbar {
+    height: 10px;
+}
+
+body.dark-mode .post-content table::-webkit-scrollbar-track {
+    background: #24262b;
+}
+
+body.dark-mode .post-content table::-webkit-scrollbar-thumb {
+    background: #4b5563;
+    border-radius: 999px;
+}
+
+@media (max-width: 760px) {
+    .post-content table {
+        font-size: 0.82rem;
+    }
+
+    .post-content th,
+    .post-content td {
+        padding: 8px 10px;
+    }
+}

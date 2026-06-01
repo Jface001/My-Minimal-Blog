@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+<title id="title">交易业务指标树</title>
+<desc id="desc">用业务链路拆指标，结果、过程和动作才能对上。</desc>
+<defs>
+  <style>
+    .bg{fill:#fbfdff}.title{font:700 34px -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans SC",sans-serif;fill:#111827}.subtitle{font:400 17px -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans SC",sans-serif;fill:#526071}.box-title{font:700 18px -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans SC",sans-serif;fill:#111827}.box-text{font:400 14px -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans SC",sans-serif;fill:#374151}.arrow{stroke:#64748b;stroke-width:3;fill:none;marker-end:url(#arrow)}
+  </style>
+  <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#64748b"/></marker>
+</defs>
+<rect class="bg" width="100%" height="100%" rx="28"/>
+<text class="title" x="48" y="62">交易业务指标树</text>
+<text class="subtitle" x="48" y="94">用业务链路拆指标，结果、过程和动作才能对上。</text>
+<path class="arrow" d="M250,214 L290,214"/>
+<path class="arrow" d="M470,214 L510,214"/>
+<path class="arrow" d="M690,214 L730,214"/>
+<path class="arrow" d="M910,214 L950,214"/>
+<path class="arrow" d="M600,263 L600,390"/>
+<path class="arrow" d="M430,434 L495,434"/>
+<path class="arrow" d="M705,434 L770,434"/>
+<rect x="70" y="165" width="180" height="98" rx="14" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
+<text class="box-title" x="88" y="197">流量进入</text>
+<text class="box-text" x="88" y="223">访问用户 渠道</text>
+<text class="box-text" x="88" y="244">UV 跳出率</text>
+<rect x="290" y="165" width="180" height="98" rx="14" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+<text class="box-title" x="308" y="197">商品浏览</text>
+<text class="box-text" x="308" y="223">曝光 点击</text>
+<text class="box-text" x="308" y="244">详情转化</text>
+<rect x="510" y="165" width="180" height="98" rx="14" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+<text class="box-title" x="528" y="197">加购下单</text>
+<text class="box-text" x="528" y="223">加购 下单 客单价</text>
+<rect x="730" y="165" width="180" height="98" rx="14" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+<text class="box-title" x="748" y="197">支付成交</text>
+<text class="box-text" x="748" y="223">订单 金额 成功率</text>
+<rect x="950" y="165" width="180" height="98" rx="14" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+<text class="box-title" x="968" y="197">履约复购</text>
+<text class="box-text" x="968" y="223">签收 退款 复购</text>
+<rect x="220" y="390" width="210" height="88" rx="14" fill="#f8fafc" stroke="#475569" stroke-width="2"/>
+<text class="box-title" x="238" y="422">结果指标</text>
+<text class="box-text" x="238" y="448">GMV 收入 留存</text>
+<rect x="495" y="390" width="210" height="88" rx="14" fill="#f8fafc" stroke="#475569" stroke-width="2"/>
+<text class="box-title" x="513" y="422">过程指标</text>
+<text class="box-text" x="513" y="448">转化率 履约率 退款率</text>
+<rect x="770" y="390" width="210" height="88" rx="14" fill="#f8fafc" stroke="#475569" stroke-width="2"/>
+<text class="box-title" x="788" y="422">动作指标</text>
+<text class="box-text" x="788" y="448">触达 核销 参与</text>
+</svg>

@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="860" viewBox="0 0 1440 860" role="img" aria-labelledby="title desc">
+<title id="title">AI 时代数据仓库总体架构</title>
+<desc id="desc">从数据源、接入、Lakehouse/Warehouse 数仓主干、AI 数据服务到消费端的分层架构，底部是横切的数据治理与安全能力。</desc>
+<defs>
+  <style>
+    .bg{fill:#f8fafc}
+    .panel{fill:#fff;stroke:#cbd5e1;stroke-width:1.4}
+    .panel-soft{fill:#f1f5f9;stroke:#cbd5e1;stroke-width:1.4}
+    .title{font:700 34px -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans SC",sans-serif;fill:#0f172a}
+    .subtitle{font:400 17px -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans SC",sans-serif;fill:#475569}
+    .col-title{font:700 17px -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans SC",sans-serif;fill:#334155}
+    .box-title{font:700 17px -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans SC",sans-serif;fill:#0f172a}
+    .box-text{font:400 13px -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans SC",sans-serif;fill:#475569}
+    .tiny{font:400 12px -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans SC",sans-serif;fill:#64748b}
+    .tag{font:700 12px -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans SC",sans-serif;fill:#334155}
+    .line{stroke:#64748b;stroke-width:2.4;fill:none;marker-end:url(#arrow)}
+    .line-soft{stroke:#94a3b8;stroke-width:1.8;fill:none;marker-end:url(#arrowSoft)}
+    .dash{stroke:#94a3b8;stroke-width:1.6;stroke-dasharray:6 6;fill:none}
+    .blue{fill:#eff6ff;stroke:#2563eb}.green{fill:#ecfdf5;stroke:#059669}.amber{fill:#fffbeb;stroke:#d97706}
+    .violet{fill:#f5f3ff;stroke:#7c3aed}.red{fill:#fff1f2;stroke:#e11d48}.cyan{fill:#ecfeff;stroke:#0891b2}.slate{fill:#f8fafc;stroke:#64748b}
+  </style>
+  <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+    <path d="M0 0 L10 5 L0 10 Z" fill="#64748b"/>
+  </marker>
+  <marker id="arrowSoft" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+    <path d="M0 0 L10 5 L0 10 Z" fill="#94a3b8"/>
+  </marker>
+</defs>
+
+<rect class="bg" width="1440" height="860" rx="28"/>
+<text class="title" x="48" y="58">AI 时代数据仓库总体架构</text>
+<text class="subtitle" x="48" y="88">标准数仓分层负责可信资产沉淀，Lakehouse/Warehouse 承载存储计算，AI 数据服务面向场景输出。</text>
+
+<rect class="panel-soft" x="40" y="120" width="1360" height="612" rx="18"/>
+<rect class="panel" x="64" y="148" width="192" height="536" rx="14"/>
+<rect class="panel" x="286" y="148" width="188" height="536" rx="14"/>
+<rect class="panel" x="504" y="148" width="344" height="536" rx="14"/>
+<rect class="panel" x="878" y="148" width="274" height="536" rx="14"/>
+<rect class="panel" x="1182" y="148" width="194" height="536" rx="14"/>
+
+<text class="col-title" x="88" y="182">1. 数据源</text>
+<text class="col-title" x="310" y="182">2. 接入层</text>
+<text class="col-title" x="528" y="182">3. Lakehouse/Warehouse 数仓主干</text>
+<text class="col-title" x="902" y="182">4. AI 数据服务</text>
+<text class="col-title" x="1206" y="182">5. 消费端</text>
+
+<!-- 数据源 -->
+<rect class="blue" x="88" y="218" width="144" height="62" rx="10"/>
+<text class="box-title" x="108" y="246">业务库</text>
+<text class="box-text" x="108" y="268">订单 / 用户 / 交易</text>
+<rect class="blue" x="88" y="304" width="144" height="62" rx="10"/>
+<text class="box-title" x="108" y="332">日志埋点</text>
+<text class="box-text" x="108" y="354">行为 / 设备 / 流量</text>
+<rect class="blue" x="88" y="390" width="144" height="62" rx="10"/>
+<text class="box-title" x="108" y="418">文件文档</text>
+<text class="box-text" x="108" y="440">合同 / FAQ / 知识库</text>
+<rect class="blue" x="88" y="476" width="144" height="62" rx="10"/>
+<text class="box-title" x="108" y="504">外部 API</text>
+<text class="box-text" x="108" y="526">市场 / 渠道 / 公开数据</text>
+
+<!-- 接入层 -->
+<rect class="green" x="310" y="218" width="140" height="72" rx="10"/>
+<text class="box-title" x="334" y="248">批处理</text>
+<text class="box-text" x="334" y="270">定时同步 / 文件落地</text>
+<rect class="green" x="310" y="322" width="140" height="72" rx="10"/>
+<text class="box-title" x="334" y="352">CDC</text>
+<text class="box-text" x="334" y="374">增量捕获 / Binlog</text>
+<rect class="green" x="310" y="426" width="140" height="72" rx="10"/>
+<text class="box-title" x="334" y="456">流处理</text>
+<text class="box-text" x="334" y="478">Kafka / Flink</text>
+<rect class="green" x="310" y="530" width="140" height="72" rx="10"/>
+<text class="box-title" x="334" y="560">文档接入</text>
+<text class="box-text" x="334" y="582">解析 / 切片 / 抽取</text>
+
+<!-- 数仓主干 -->
+<rect class="amber" x="528" y="214" width="296" height="66" rx="10"/>
+<text class="tag" x="548" y="238">原始可信留存</text>
+<text class="box-title" x="548" y="262">ODS 原始层</text>
+<text class="box-text" x="664" y="262">原样落地 · 可追溯 · 可重放</text>
+
+<rect class="violet" x="528" y="310" width="142" height="72" rx="10"/>
+<text class="tag" x="548" y="334">事实明细</text>
+<text class="box-title" x="548" y="358">DWD 明细层</text>
+<text class="box-text" x="548" y="374">清洗 / 对齐 / 标准化</text>
+<rect class="violet" x="682" y="310" width="142" height="72" rx="10"/>
+<text class="tag" x="702" y="334">公共维度</text>
+<text class="box-title" x="702" y="358">DIM 维度层</text>
+<text class="box-text" x="702" y="374">实体 / 主数据 / ID</text>
+
+<rect class="red" x="528" y="414" width="296" height="72" rx="10"/>
+<text class="tag" x="548" y="438">公共复用资产</text>
+<text class="box-title" x="548" y="462">DWS 数仓层</text>
+<text class="box-text" x="664" y="462">主题汇总 · 公共指标 · 宽表</text>
+
+<rect class="cyan" x="528" y="518" width="296" height="72" rx="10"/>
+<text class="tag" x="548" y="542">场景交付</text>
+<text class="box-title" x="548" y="566">ADS / RPT 应用层</text>
+<text class="box-text" x="708" y="566">数据集 · 报表层 · 服务表</text>
+
+<rect class="slate" x="528" y="612" width="296" height="42" rx="10"/>
+<text class="box-text" x="548" y="638">开放表格式 / SQL 引擎 / 调度编排 / 弹性计算</text>
+
+<!-- AI 数据服务 -->
+<rect class="cyan" x="902" y="218" width="226" height="66" rx="10"/>
+<text class="box-title" x="926" y="246">指标层 / 语义层</text>
+<text class="box-text" x="926" y="268">统一口径 · NL2SQL · 指标 API</text>
+<rect class="cyan" x="902" y="318" width="226" height="66" rx="10"/>
+<text class="box-title" x="926" y="346">特征层 / Feature Store</text>
+<text class="box-text" x="926" y="368">离线特征 · 在线特征 · 训练服务</text>
+<rect class="cyan" x="902" y="418" width="226" height="66" rx="10"/>
+<text class="box-title" x="926" y="446">向量索引 / RAG Corpus</text>
+<text class="box-text" x="926" y="468">切片 · Embedding · 检索重排</text>
+<rect class="cyan" x="902" y="518" width="226" height="66" rx="10"/>
+<text class="box-title" x="926" y="546">数据 API / Agent Tools</text>
+<text class="box-text" x="926" y="568">权限校验 · 工具调用 · 结果审计</text>
+
+<!-- 消费端 -->
+<rect class="slate" x="1206" y="218" width="146" height="58" rx="10"/>
+<text class="box-title" x="1228" y="246">BI 看板</text>
+<text class="box-text" x="1228" y="266">经营分析</text>
+<rect class="slate" x="1206" y="316" width="146" height="58" rx="10"/>
+<text class="box-title" x="1228" y="344">报表系统</text>
+<text class="box-text" x="1228" y="364">固定报表 / 自助分析</text>
+<rect class="slate" x="1206" y="414" width="146" height="58" rx="10"/>
+<text class="box-title" x="1228" y="442">RAG / Agent</text>
+<text class="box-text" x="1228" y="462">问答 / 自动化流程</text>
+<rect class="slate" x="1206" y="512" width="146" height="58" rx="10"/>
+<text class="box-title" x="1228" y="540">模型服务</text>
+<text class="box-text" x="1228" y="560">训练 / 推理 / 决策</text>
+
+<!-- 数据流 -->
+<path class="line" d="M232 249 H310"/>
+<path class="line" d="M232 335 H310"/>
+<path class="line" d="M232 453 H310"/>
+<path class="line" d="M232 507 H310"/>
+<path class="line" d="M450 358 H528"/>
+<path class="line-soft" d="M450 566 H490 V247 H528"/>
+<path class="line" d="M676 280 V310"/>
+<path class="line-soft" d="M676 382 V414"/>
+<path class="line" d="M676 486 V518"/>
+<path class="dash" d="M670 346 H682"/>
+<path class="line" d="M824 251 H902"/>
+<path class="line" d="M824 450 H902"/>
+<path class="line" d="M824 554 H902"/>
+<path class="line-soft" d="M824 346 H902"/>
+<path class="line" d="M1128 251 H1206"/>
+<path class="line" d="M1128 351 H1206"/>
+<path class="line" d="M1128 451 H1206"/>
+<path class="line" d="M1128 551 H1206"/>
+
+<!-- 横切治理 -->
+<rect class="panel" x="40" y="756" width="1360" height="72" rx="16"/>
+<text class="col-title" x="72" y="798">横切治理与安全底座</text>
+<text class="box-text" x="248" y="798">数据目录 · 元数据 · 血缘 · 质量规则 · 权限控制 · 脱敏分级 · 数据契约 · SLA · 成本治理 · 审计追踪</text>
+<path class="dash" d="M96 756 V684"/>
+<path class="dash" d="M380 756 V684"/>
+<path class="dash" d="M676 756 V684"/>
+<path class="dash" d="M1015 756 V684"/>
+<path class="dash" d="M1279 756 V684"/>
+</svg>
