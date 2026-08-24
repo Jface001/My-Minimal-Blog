@@ -11,6 +11,7 @@ const config = {
     outDir: './public',
     siteTitle: '惊羽的博客',
     author: '惊羽',
+    unpublishedFiles: ['Vol28-如何从零开始建设一个及格的数据仓库.md'],
     navCategories: ['杂货铺', '数据仓库'] // Optional: Specify categories to show in nav. Leave empty to show all.
 };
 
@@ -68,6 +69,7 @@ const tagsMap = new Map();
 const categoriesMap = new Map();
 
 files.forEach(file => {
+    if (config.unpublishedFiles.includes(file)) return;
     if (path.extname(file) === '.md') {
         const content = fs.readFileSync(path.join(config.contentDir, file), 'utf-8');
         const data = frontMatter(content);
